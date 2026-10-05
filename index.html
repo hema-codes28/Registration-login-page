@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+</head>
+<body>
+
+    <h1>Login</h1>
+
+    <label>First name:</label>
+    <input type="text" id="first name">
+    <br><br>
+
+    <label>Last name:</label>
+    <input type="text" id="last name">
+    <br><br>
+
+    <label>Phone number:</label>
+    <input type="password" id="phone number">
+    <br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password">
+    <br><br>
+
+    <label>Email:</label>
+    <input type="text" id="email">
+
+    <button id="loginBtn">Login</button>
+
+    <p id="message"></p>
+
+    <script>
+        let firstname = document.getElementById("first name");
+        let lastname = document.getElementById("last name");
+        let phoneSnumber = document.getElementById("phone number");
+        let password = document.getElementById("password");
+        let email = document.getElementById("email");
+        let loginbtn = document.getElementById("loginBtn");
+        let message = document.getElementById("message");
+
+        loginBtn.addEventListener("click", function() {
+            let pass = password.value;
+            let email1 = email.value;
+
+            if (pass == "panda" && email1 == "hema@gmail.com") {
+                message.innerHTML = "Login successfully";
+            } else {
+                message.innerHTML = "Invalid email or password";
+            }
+        });
+    </script>
+
+</body>
+</html>
